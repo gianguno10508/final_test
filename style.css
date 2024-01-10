@@ -1,0 +1,145 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100%;
+}
+
+.title {
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.destinations {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.destination {
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.destination h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 22px;
+  padding: 10px 0;
+}
+.booking-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.comments {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+#comment-list {
+  list-style: none;
+  padding: 0;
+}
+
+.comment {
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  bottom: 0;
+  width: 100%;
+}
+/* Cửa sổ đèn */
+#lightbox {
+  @apply fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 hidden flex items-center justify-center;
+}
+
+#lightbox-content {
+  @apply bg-white p-8 rounded-lg max-w-2xl;
+}
+
+#lightbox-image {
+  @apply w-full h-auto;
+}
+
+#lightbox-title {
+  @apply text-lg font-bold mt-4;
+}
+
+/* Hiệu ứng nhấp nháy */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animated {
+  animation-duration: 0.5s;
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+}

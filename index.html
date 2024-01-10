@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Trang Web Du Lịch</title>
+  </head>
+  <body>
+    <header>
+      <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+          <a href="#" class="text-white text-lg font-bold">Du Lịch</a>
+          <div class="flex space-x-4">
+            <a href="#" class="text-white">Trang Chủ</a>
+            <a href="#destinations" class="text-white">Điểm Đến</a>
+            <a href="#booking" class="text-white">Đặt Tour</a>
+            <a href="#comments" class="text-white">Bình Luận</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="banner">
+      <img src="./images/banner.jpg" alt="banner" />
+    </div>
+    <div class="title">
+      <h1>Danh sách Điểm Đến Phổ Biến</h1>
+    </div>
+
+    <div class="container">
+      <section class="destinations" id="destinations">
+        <div class="destination">
+          <img
+            src="/images/tour-01.jpg"
+            alt="Bồ Đào Nha"
+            onclick="openLightbox('/images/tour-01.jpg', 'Bồ Đào Nha')"
+          />
+          <h2>Bồ Đào Nha</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nulla
+            libero velit eveniet iure numquam ab hic, dicta possimus quod facere
+            ratione earum incidunt est, dolorum, eius in dolore magni.
+          </p>
+        </div>
+
+        <div class="destination">
+          <img
+            src="/images/tour-07.jpg"
+            alt="Việt Nam"
+            onclick="openLightbox('/images/tour-07.jpg', 'Việt Nam')"
+          />
+          <h2>Việt Nam</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam
+            odio eaque ipsam consequatur reiciendis ex accusamus quae aspernatur
+            ipsa laborum commodi iste ad excepturi, beatae ipsum nesciunt
+            blanditiis laudantium deserunt!
+          </p>
+        </div>
+        <div class="destination">
+          <img
+            src="/images/tour-09.jpg"
+            alt="England"
+            onclick="openLightbox('/images/tour-09.jpg', 'England')"
+          />
+          <h2>England</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+            sequi nostrum tempora, ullam fuga odit ad sed maxime harum dolorem
+            eveniet quisquam natus molestiae libero explicabo rem, eos provident
+            ea?
+          </p>
+        </div>
+        <div class="destination">
+          <img
+            src="images/tour-13.jpg"
+            alt="Mỹ"
+            onclick="openLightbox('/images/tour-13.jpg', 'Mỹ')"
+          />
+          <h2>Mỹ</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio esse,
+            quaerat quibusdam est repellendus expedita excepturi quia dolores
+            nobis adipisci fugit fuga tenetur illum sed vel pariatur sapiente
+            similique iure.
+          </p>
+        </div>
+        <div class="destination">
+          <img
+            src="images/tour-14.jpg"
+            alt="Úc"
+            onclick="openLightbox('/images/tour-14.jpg', 'Úc')"
+          />
+          <h2>Úc</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+            harum consectetur, quisquam pariatur, voluptatum architecto
+            cupiditate quas saepe ipsum at illo impedit. Porro perspiciatis
+            laboriosam voluptas ex et. Veritatis, magnam.
+          </p>
+        </div>
+        <div class="destination">
+          <img
+            src="images/tour-16.jpg"
+            alt="Japanese"
+            onclick="openLightbox('/images/tour-16.jpg', 'Japanese')"
+          />
+          <h2>Japanese</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis
+            beatae illo eligendi rem. In iusto velit unde. Perferendis possimus
+            provident ex, eligendi qui sed cupiditate maxime optio vel autem
+            eos!
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <section class="booking-form" id="booking">
+      <h2 class="text-2xl font-bold">Đặt Tour</h2>
+      <form method="post">
+        <label for="name" class="mt-2">Tên:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Tên của bạn?"
+          class="border border-gray-300 p-1 rounded-md"
+          required
+        />
+
+        <label for="email" class="mt-2">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email của bạn?"
+          class="border border-gray-300 p-1 rounded-md"
+          required
+        />
+
+        <label for="destination" class="mt-2">Điểm Đến Mong Muốn:</label>
+        <select
+          id="destination"
+          name="destination"
+          class="border border-gray-300 p-1 rounded-md"
+          required
+        >
+          <option value="destination1">Điểm Đến 1</option>
+          <option value="destination2">Điểm Đến 2</option>
+          <option value="destination3">Điểm Đến 3</option>
+          <option value="destination4">Điểm Đến 4</option>
+          <option value="destination5">Điểm Đến 5</option>
+          <option value="destination6">Điểm Đến 6</option>
+          <!-- Thêm các lựa chọn khác cho các địa điểm khác -->
+        </select>
+
+        <label for="departure-date" class="mt-2">Ngày Khởi Hành:</label>
+        <input
+          type="date"
+          id="departure-date"
+          class="border border-gray-300 p-1 rounded-md"
+          name="departure-date"
+          required
+        />
+
+        <button
+          type="submit"
+          class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 mt-5"
+        >
+          Đặt Tour
+        </button>
+      </form>
+    </section>
+    <div class="comments" id="comments">
+      <h2 class="text-2xl font-bold">Bình Luận</h2>
+      <ul id="comment-list" class="ml-4 mt-2"></ul>
+      <textarea
+        class="border border-gray-300 p-3 rounded-md"
+        id="comment-input"
+        placeholder="Thêm bình luận"
+      ></textarea>
+      <button
+        onclick="addComment()"
+        class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 mt-5"
+      >
+        Thêm
+      </button>
+    </div>
+
+    <div
+      id="lightbox"
+      class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center"
+    >
+      <div id="lightbox-content" class="bg-white p-8 rounded-lg max-w-2xl">
+        <img id="lightbox-image" src="" alt="Ảnh lớn" />
+        <h2 id="lightbox-title" class="text-lg font-bold mt-4"></h2>
+        <button
+          onclick="closeLightbox()"
+          class="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+        >
+          Đóng
+        </button>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; Giang NV</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
